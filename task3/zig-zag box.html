@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صناديق بتأثير متعرج</title>
+    <style>
+        /* الحاوية التي تحتوي على الصناديق */
+        .container {
+            display:flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            width: 60%;
+            margin-top: 50px;
+        }
+        /* الصناديق الفردية */
+        .box {
+            width: 60px;
+            height: 60px;
+            border: 2px solid #000;
+        }
+
+        /* تأثير المتعرج باستخدام ::before و ::after */
+        
+        
+
+        .box::before {
+            top: 0;
+        }
+
+        .box::after {
+            bottom: 0;
+            transform: skewX(45deg);
+
+        }
+
+        /* تغيير موقع الصناديق لتظهر بشكل متعرج */
+        .box:nth-child(odd) {
+            margin-top: 20px;
+            background-color:yellow;
+
+
+        }
+
+        .box:nth-child(even) {
+            margin-top: -20px;
+            background-color:rgb(255, 0, 225);
+
+        }
+    </style>
+</head>
+<body>
+    <h2>Zig-Zag box</h2>
+     <br><hr> 
+
+    <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+
+</body>
+</html>
