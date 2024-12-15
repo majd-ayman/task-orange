@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exericse #1 grid</title>
+</head>
+<style>
+.parent{
+    padding: 10px;
+    height: 400px;
+    display:grid;
+    gap: 10px;
+grid-template-areas: 
+"Header Header Header "
+" nav  nav main"
+" nav  nav main"
+" footer footer footer"
+
+
+}
+
+
+.Header{
+    grid-area: Header;
+}
+
+.nav{
+    grid-area: nav;
+ 
+
+}
+.main{
+    grid-area: main ;
+
+}
+
+.footer{
+    grid-area:footer;
+
+}
+</style>
+
+<body>
+<div class="parent">
+<div class="Header" style="background-color: black;"></div>
+<div class="nav" style="background-color: orangered;"></div>
+<div class="main" style="background-color: green;"></div>
+<div class="footer" style="background-color: blue;"></div>
+</div>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
